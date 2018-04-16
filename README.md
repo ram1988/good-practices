@@ -1,8 +1,7 @@
 # good-practices
+- To send the binary data across network in hex format:  
 
-To send the binary data across network in hex format: 
-
-import pickle, json
+```import pickle, json
 from sklearn.feature_extraction.text import TfidfVectorizer
 corpus = ["This is very strange",
           "This is very nice"]
@@ -20,10 +19,10 @@ resp = json.load(open("sample.json","r"))
 
 input_obj = pickle.loads(bytes.fromhex(resp["binary"]))
 print(str(jm_data)==str(input_obj))
-print(input_obj["vectorizer"].transform(["very nice"]))
+print(input_obj["vectorizer"].transform(["very nice"])) ```
 
 
-To check if its base64
+To send the binary data across network in hex format: 
 
 def is_base64(orig_base64):
     try:
@@ -33,3 +32,10 @@ def is_base64(orig_base64):
     except Exception as e:
         pass;
     return False;
+
+
+
+
+
+
+
