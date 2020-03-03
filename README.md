@@ -35,7 +35,18 @@ def is_base64(orig_base64):
 
 
 
+To perform the non-session based Authentication mechanism 
+and to protect the endpoints
 
+https://docs.nestjs.com/techniques/authentication
 
+For example, if the Auth flow is performed using Google,
+
+1.) Generate your own jwt secret key
+2.) Configure that in your program
+3.) Prepare your return own user object after Google login, and encrypt using jwt secret (symmetric encryption). It is returned as access token.
+4.) Access token needs to be sent in the subsequent API calls
+5.) Jwt Auth guard intercepts your request and decrypts using the same secret key. 
+If the decryption is successful, then the access token is valid. If not, 404 unauthorized
 
 
