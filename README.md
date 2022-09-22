@@ -50,3 +50,8 @@ For example, if the Auth flow is performed using Google,
 If the decryption is successful, then the access token is valid. If not, 404 unauthorized
 
 
+
+MicroK8s (Alternative to minikube)
+https://microk8s.io/
+
+Kustomize for K8s config charts
